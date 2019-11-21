@@ -37,13 +37,13 @@ public struct VOGWalkthroughData: Codable {
     }
 }
 
-struct VOGWalkthroughColorConfig{
-    var title:UIColor!
-    var content:UIColor!
-    var icon:UIColor!
-    var background:UIColor!
+public struct VOGWalkthroughColorConfig{
+    public var title:UIColor!
+    public var content:UIColor!
+    public var icon:UIColor!
+    public var background:UIColor!
     
-    init() {
+    public init() {
         title = .black
         content = .black
         icon = .black
@@ -51,16 +51,20 @@ struct VOGWalkthroughColorConfig{
     }
 }
 
-struct VOGWalkthroughConfig{
-    var url:String = "" // URL to get list of walkthrough
-    var color:VOGWalkthroughColorConfig = VOGWalkthroughColorConfig()
-    var outsidePadding: CGFloat = 0
-    var insidePadding: CGFloat = 0
-    var font: UIFont = UIFont.systemFont(ofSize: 15)
-    var tapFont: UIFont = UIFont.systemFont(ofSize: 13)
-    var textSize: CGFloat = 17
-    var delay: Double = 1
-    var iconSize: CGSize = CGSize.zero
+public struct VOGWalkthroughConfig{
+    public var url:String = "" // URL to get list of walkthrough
+    public var color:VOGWalkthroughColorConfig = VOGWalkthroughColorConfig()
+    public var outsidePadding: CGFloat = 0
+    public var insidePadding: CGFloat = 0
+    public var font: UIFont = UIFont.systemFont(ofSize: 15)
+    public var tapFont: UIFont = UIFont.systemFont(ofSize: 13)
+    public var textSize: CGFloat = 17
+    public var delay: Double = 1
+    public var iconSize: CGSize = CGSize.zero
+    
+    public init(){
+        
+    }
 }
 
 class VOGAppStateWalkthrough {
@@ -133,7 +137,7 @@ public class VOGWalkthrough {
         NotificationCenter.default.addObserver(self, selector: #selector(showNextVOGWalkthroughStep), name: Notification.Name.VOGWalkthroughStepDismissed, object: nil)
     }
     
-    func setConfig(config:VOGWalkthroughConfig){
+    public func setConfig(config:VOGWalkthroughConfig){
         self.config = config
         #if DEBUG
         loadVOGWalkthrough()
@@ -461,18 +465,18 @@ public class VOGWalkthrough {
     
     func loadVOGWalkthrough(){
         
-//        let headers: HTTPHeaders = ["Accept": "application/json"]
-//        Alamofire.request(self.config.url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData(completionHandler: { response in
-//            switch response.result {
-//            case .success(let data):
-//                let completionResponse = self.decode(item: VOGWalkthroughGetResponse.self, data: data)
-//                
-//                self.walkthroughData = completionResponse.0?.data ?? []
-//            case .failure(let error):
-//                print(error)
-//                break
-//            }
-//        })
+        let headers: HTTPHeaders = ["Accept": "application/json"]
+        Alamofire.request(self.config.url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData(completionHandler: { response in
+            switch response.result {
+            case .success(let data):
+                let completionResponse = self.decode(item: VOGWalkthroughGetResponse.self, data: data)
+                
+                self.walkthroughData = completionResponse.0?.data ?? []
+            case .failure(let error):
+                print(error)
+                break
+            }
+        })
     }
     
     // MARK: - Decoder
