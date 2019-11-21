@@ -9,8 +9,8 @@
 Pod::Spec.new do |s|
   s.name             = 'VOGWalkthrough'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of VOGWalkthrough.'
-
+  s.summary          = 'VOG Walkthrough.'
+  s.swift_version    = '4.2'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
@@ -36,7 +36,7 @@ TODO: Add long description of the pod here.
   #   'VOGWalkthrough' => ['VOGWalkthrough/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  #s.public_header_files = 'Pod/Classes/**/*.h'
+  s.frameworks = 'UIKit'
+  s.dependency 'Alamofire', '~> 4.8.1'
 end

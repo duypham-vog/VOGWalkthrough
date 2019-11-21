@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import VOGWalkthrough
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        VOGWalkthrough.shared.showStep(on: self.view, screenId: "Scoreboard")
     }
 
     override func didReceiveMemoryWarning() {
