@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'VOGWalkthrough_Example' do
+  pod 'VOGWalkthrough', :path => '../'
+
+  target 'VOGWalkthrough_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
