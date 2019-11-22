@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import VOGWalkthrough
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var config = VOGWalkthroughConfig()
+        config.url = "https://api.staging.adp.vogdevelopment.com/api/walkthrough"
+        //        config.color.title = .red
+        //        config.color.content = .yellow
+        //        config.color.icon = .blue
+        config.outsidePadding = 20
+        config.insidePadding = 20
+        config.delay = 0.6
+        config.iconSize = CGSize(width: 20, height: 20)
+        
+        let walkthrough = VOGWalkthrough.shared
+        walkthrough.setConfig(config: config)
+        
         return true
     }
 
