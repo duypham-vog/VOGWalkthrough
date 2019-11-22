@@ -1,0 +1,16 @@
+PODS:
+  - VOGWalkthrough (0.1.1)
+
+DEPENDENCIES:
+  - VOGWalkthrough (from `../`)
+
+EXTERNAL SOURCES:
+  VOGWalkthrough:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  VOGWalkthrough: d501790e3606b3a4b0a09fba3b514e75468d4b9f
+
+PODFILE CHECKSUM: 361e6ed490e139adb087ed071cb610bfc182a335
+
+COCOAPODS: 1.8.4

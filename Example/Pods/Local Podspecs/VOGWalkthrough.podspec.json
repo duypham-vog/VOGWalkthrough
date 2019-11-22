@@ -1,0 +1,25 @@
+{
+  "name": "VOGWalkthrough",
+  "version": "0.1.1",
+  "summary": "VOG Walkthrough.",
+  "swift_versions": "4.2",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/duypham-vog/VOGWalkthrough",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "duypham-vog": "duy@vogcalgaryappdeveloper.com"
+  },
+  "source": {
+    "git": "https://github.com/duypham-vog/VOGWalkthrough.git",
+    "tag": "0.1.1"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "VOGWalkthrough/Classes/**/*",
+  "frameworks": "UIKit",
+  "swift_version": "4.2"
+}

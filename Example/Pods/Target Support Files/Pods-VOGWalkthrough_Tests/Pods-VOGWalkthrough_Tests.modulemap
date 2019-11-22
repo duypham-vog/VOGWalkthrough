@@ -1,0 +1,6 @@
+framework module Pods_VOGWalkthrough_Tests {
+  umbrella header "Pods-VOGWalkthrough_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

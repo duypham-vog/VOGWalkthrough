@@ -1,0 +1,6 @@
+framework module VOGWalkthrough {
+  umbrella header "VOGWalkthrough-umbrella.h"
+
+  export *
+  module * { export * }
+}
