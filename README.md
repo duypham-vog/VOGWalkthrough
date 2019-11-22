@@ -28,8 +28,8 @@ import VOGWalkthrough
 ```ruby
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
 ```
-</br>
 Insert below code to config VOGWalkthrough
+
 ```ruby
 var config = VOGWalkthroughConfig()
 config.url = "Walkthrough URL"
@@ -67,7 +67,7 @@ VOGWalkthrough.shared.showStep(on: self, screenId: "SCREENID")
 
 ## Author
 
-DUY PHAM, duy@vogcalgaryappdeveloper.com
+Duy Pham
 
 ## License
 
