@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'VOGWalkthrough/Classes/**/*'
   
   s.resource_bundles = {
-    'VOGWalkthrough' => ['VOGWalkthrough/Assets/*.png']
+    'VOGWalkthrough' => ['VOGWalkthrough/Assets/**/*.png']
   }
 
   #s.public_header_files = 'Pod/Classes/**/*.h'
