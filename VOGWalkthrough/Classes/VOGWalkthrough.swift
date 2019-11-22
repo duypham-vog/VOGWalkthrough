@@ -2,6 +2,7 @@
 import Foundation
 import UIKit
 import Alamofire
+import Alamofire_Synchronous
 
 extension Notification.Name {
     static let VOGWalkthroughDownloaded = Notification.Name("walkthroughDownloaded")
@@ -191,6 +192,7 @@ public class VOGWalkthrough {
     }
     
     public func showStep(_ sId: Int? = nil, on controller: UIViewController, screenId: String) {
+
         if VOGAppStateWalkthrough.getWalkthroughComplete(for: screenId) != nil {
             //            return
         }
@@ -479,21 +481,38 @@ public class VOGWalkthrough {
     
     //MARK: - ENDPOINT
     
-    func loadVOGWalkthrough(){
+    public func loadVOGWalkthrough(){
         
         let headers: HTTPHeaders = ["Accept": "application/json"]
+        
+        //get request and response json
+//        let response = Alamofire.request(self.config.url, parameters: nil).responseJSON()
+//
+//        let response = Alamofire.request(self.config.url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON()
+//
+//        switch response.result {
+//        case .success(let data):
+//            let completionResponse = self.decode(item: VOGWalkthroughGetResponse.self, data: data as! Data)
+//            self.walkthroughData = completionResponse.0?.data ?? []
+//        case .failure(let error):
+//            print(error)
+//            break
+//        }
+        
+
         Alamofire.request(self.config.url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData(completionHandler: { response in
             switch response.result {
             case .success(let data):
                 let completionResponse = self.decode(item: VOGWalkthroughGetResponse.self, data: data)
                 self.walkthroughData = completionResponse.0?.data ?? []
+
             case .failure(let error):
                 print(error)
                 break
             }
         })
     }
-    
+
     // MARK: - Decoder
     fileprivate func newJSONDecoder() -> JSONDecoder {
         let decoder = JSONDecoder()
