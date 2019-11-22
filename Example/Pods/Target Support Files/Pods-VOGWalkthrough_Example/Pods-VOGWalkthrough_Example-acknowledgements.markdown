@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## VOGWalkthrough
 
-Copyright (c) 2019 duypham-vog <duy@vogcalgaryappdeveloper.com>
+Copyright (c) 2019 VOG
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

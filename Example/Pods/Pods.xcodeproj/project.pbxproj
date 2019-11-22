@@ -9,19 +9,27 @@
 /* Begin PBXBuildFile section */
 		00EE34ABA6E0941086BF6FDFD6144954 /* Pods-VOGWalkthrough_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DEEACCA1615D963766B701B59538AA0D /* Pods-VOGWalkthrough_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14D40240D801E5798D2701AF080E617F /* Pods-VOGWalkthrough_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74AA3CF46395D75E2F750146195C9E22 /* Pods-VOGWalkthrough_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15D57AA923884E52001A5D30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D57AA823884E52001A5D30 /* Assets.xcassets */; };
-		326F117FB000E3207A6AF1BBA46A1F95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		15D57AAC238850F3001A5D30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D57AAB238850F3001A5D30 /* Assets.xcassets */; };
+		168A6D509C410D42F875491106A0D75A /* VOGWalkthrough-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC832A8ED716154F53A724FD15ED1BE /* VOGWalkthrough-dummy.m */; };
+		391D356171F607215481092C4766C76F /* VOGWalkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF686A52EFC512B9225CD40A318437C1 /* VOGWalkthrough.swift */; };
 		3C51A892B1D47EBE2FA5101E6C3298EF /* Pods-VOGWalkthrough_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82DCFC2483CAFDD5A90FE72BAAFD3D49 /* Pods-VOGWalkthrough_Tests-dummy.m */; };
-		7445A51A9266F99B43973FACABCA19A9 /* VOGWalkthrough-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C1188721C03471F130E7A55C8BF9CA80 /* VOGWalkthrough-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		94E25783BBD8A64E107585C89C30DDB2 /* VOGWalkthrough-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBDB75CB6B69E24BD3FF69205D6CFD5 /* VOGWalkthrough-dummy.m */; };
 		9BD792EBE1833F0072B7CD08B4E9E164 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		AC026B9F090C75A02E23E650803F18CD /* VOGWalkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FF18DF19D0FD6A36CD0B43E280A018 /* VOGWalkthrough.swift */; };
-		E41876B8126811E1EFB3A11F8EFCDB0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		A7C8D1D1D738A233666F91590D5133D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		C6A3FA8874048E59ABC811354637F225 /* VOGWalkthrough-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C6FD897AC322CACFF2B735A1DD4E7BD /* VOGWalkthrough-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF7C3B61DD8705AE26A43C6F2E9B33FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
 		E6C1A1BE2A9E65BD467D2F39E40AB5B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		F8AD70B512B9A8A01C250C07F3AC7E37 /* VOGWalkthrough.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 59185D1CAB541E02BD17927B136B6E18 /* VOGWalkthrough.bundle */; };
 		FE05FB7801D91BB0C48C78A256926E4F /* Pods-VOGWalkthrough_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A69E6FCE810935E385A1AB4011F6F2 /* Pods-VOGWalkthrough_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0DECED7CAF48678E4D14218082DAE7EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 733DB84ED6783F6BEDC1169C4E9CE7BA;
+			remoteInfo = "VOGWalkthrough-VOGWalkthrough";
+		};
 		C0DFA5620856CDF3104B3C4B9616BC75 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -40,38 +48,40 @@
 
 /* Begin PBXFileReference section */
 		02CDF72F1180760BB02A87AA559F892B /* VOGWalkthrough.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VOGWalkthrough.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CBA14A636645FB9A63BC4279A873104 /* VOGWalkthrough.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = VOGWalkthrough.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		10A69E6FCE810935E385A1AB4011F6F2 /* Pods-VOGWalkthrough_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VOGWalkthrough_Example-dummy.m"; sourceTree = "<group>"; };
-		13F16509296D5DF6B2BCD38CD76A1489 /* VOGWalkthrough.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VOGWalkthrough.xcconfig; sourceTree = "<group>"; };
-		15D57AA823884E52001A5D30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = VOGWalkthrough/Assets/Assets.xcassets; sourceTree = "<group>"; };
+		15D57AAB238850F3001A5D30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = VOGWalkthrough/Assets/Assets.xcassets; sourceTree = "<group>"; };
+		1B5A40E9949DDFCE81D358A8A4EF7567 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1DC5608C586B9B6F8A30AB356DE58C5A /* Pods-VOGWalkthrough_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VOGWalkthrough_Example-frameworks.sh"; sourceTree = "<group>"; };
-		1F2F090E97B275B270731E366C33C6FE /* VOGWalkthrough.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VOGWalkthrough.modulemap; sourceTree = "<group>"; };
 		1F4FA8653FAEC2F115E4F1C7C9768307 /* Pods-VOGWalkthrough_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VOGWalkthrough_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2139A9F2C644C65F29C7412B09CD88D8 /* Pods_VOGWalkthrough_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VOGWalkthrough_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		23336F75352103FD750779B35E5F5573 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2AC832A8ED716154F53A724FD15ED1BE /* VOGWalkthrough-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VOGWalkthrough-dummy.m"; sourceTree = "<group>"; };
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		36AEE26D30184D18EDE526C57511E4AE /* VOGWalkthrough-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VOGWalkthrough-Info.plist"; sourceTree = "<group>"; };
+		3746CFF21E096342812C8CF55B492D26 /* ResourceBundle-VOGWalkthrough-VOGWalkthrough-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-VOGWalkthrough-VOGWalkthrough-Info.plist"; sourceTree = "<group>"; };
 		3F6B3BE622C952382C5FD092639A592F /* Pods-VOGWalkthrough_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VOGWalkthrough_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		47BC11A7E46AF089C960A7519E61FD6F /* VOGWalkthrough-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VOGWalkthrough-prefix.pch"; sourceTree = "<group>"; };
 		4DA98E59FC524ED8AAFCB0F20580E5A0 /* Pods-VOGWalkthrough_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VOGWalkthrough_Tests.modulemap"; sourceTree = "<group>"; };
 		4E68C08C0CC66CCBB454B8100C190C34 /* Pods-VOGWalkthrough_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VOGWalkthrough_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		59185D1CAB541E02BD17927B136B6E18 /* VOGWalkthrough.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VOGWalkthrough.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		74AA3CF46395D75E2F750146195C9E22 /* Pods-VOGWalkthrough_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VOGWalkthrough_Tests-umbrella.h"; sourceTree = "<group>"; };
+		7C6FD897AC322CACFF2B735A1DD4E7BD /* VOGWalkthrough-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VOGWalkthrough-umbrella.h"; sourceTree = "<group>"; };
+		811ACE328C5EEACFDEBA01A09F69276C /* VOGWalkthrough.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = VOGWalkthrough.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		824C0114ACB18E2DBADE7009F3432435 /* Pods-VOGWalkthrough_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VOGWalkthrough_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		82DCFC2483CAFDD5A90FE72BAAFD3D49 /* Pods-VOGWalkthrough_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VOGWalkthrough_Tests-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0785CB749267B45DE84CBB3B05B4E03 /* VOGWalkthrough.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VOGWalkthrough.xcconfig; sourceTree = "<group>"; };
 		B29C2CD28F699D24647E652C7072A258 /* Pods-VOGWalkthrough_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VOGWalkthrough_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		C1188721C03471F130E7A55C8BF9CA80 /* VOGWalkthrough-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VOGWalkthrough-umbrella.h"; sourceTree = "<group>"; };
+		B5E7A96529AE8CC9E6AC3DD2730B86C7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C125F7C7442C02CB61A9A4653C4F699F /* Pods-VOGWalkthrough_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VOGWalkthrough_Example.modulemap"; sourceTree = "<group>"; };
 		C22BE55D84286146AB8BC29434E047D6 /* Pods-VOGWalkthrough_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VOGWalkthrough_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C7B73E1D17666070E86FC407FF251FDA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CBFD66FE4541E087C815C5A97112281D /* Pods-VOGWalkthrough_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VOGWalkthrough_Tests-Info.plist"; sourceTree = "<group>"; };
 		D10E366283EC1330D96CD8915CC93184 /* Pods_VOGWalkthrough_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VOGWalkthrough_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4BDF10F6BEE173DACD8C7BDD9CE4F9F /* Pods-VOGWalkthrough_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VOGWalkthrough_Example-Info.plist"; sourceTree = "<group>"; };
-		DAFE85B15C571915CCB5FE03CF6E3954 /* VOGWalkthrough-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VOGWalkthrough-Info.plist"; sourceTree = "<group>"; };
-		DCBDB75CB6B69E24BD3FF69205D6CFD5 /* VOGWalkthrough-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VOGWalkthrough-dummy.m"; sourceTree = "<group>"; };
+		DBE7B8F83BD3B58B93A4F4976D1BDE3C /* VOGWalkthrough-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VOGWalkthrough-prefix.pch"; sourceTree = "<group>"; };
 		DEEACCA1615D963766B701B59538AA0D /* Pods-VOGWalkthrough_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VOGWalkthrough_Example-umbrella.h"; sourceTree = "<group>"; };
+		E72C9E9978671EEB518BC17CFFE42AE0 /* VOGWalkthrough.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VOGWalkthrough.modulemap; sourceTree = "<group>"; };
+		EF686A52EFC512B9225CD40A318437C1 /* VOGWalkthrough.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VOGWalkthrough.swift; path = VOGWalkthrough/Classes/VOGWalkthrough.swift; sourceTree = "<group>"; };
 		F6EFF551D9FCBD43D254093EA23EFE3A /* Pods-VOGWalkthrough_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VOGWalkthrough_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F8FF18DF19D0FD6A36CD0B43E280A018 /* VOGWalkthrough.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VOGWalkthrough.swift; path = VOGWalkthrough/Classes/VOGWalkthrough.swift; sourceTree = "<group>"; };
 		FDC4C2BD475BD1D0F0E3DFC76EF0AB34 /* Pods-VOGWalkthrough_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VOGWalkthrough_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,18 +102,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4401E46054F4244A6721475959C21235 /* Frameworks */ = {
+		3764EE8731A431D07D92273A844E78DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E41876B8126811E1EFB3A11F8EFCDB0A /* Foundation.framework in Frameworks */,
-				326F117FB000E3207A6AF1BBA46A1F95 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D653C81207B6522848ADD8F1EC3C14B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7C8D1D1D738A233666F91590D5133D5 /* Foundation.framework in Frameworks */,
+				DF7C3B61DD8705AE26A43C6F2E9B33FA /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05CA5B594FB9E11742D9F2F96D8A705B /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				B5E7A96529AE8CC9E6AC3DD2730B86C7 /* LICENSE */,
+				1B5A40E9949DDFCE81D358A8A4EF7567 /* README.md */,
+				811ACE328C5EEACFDEBA01A09F69276C /* VOGWalkthrough.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,45 +142,21 @@
 		2ABD6610E4FF84B8E2259C1AEF06ADB3 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				405DC7255A6D486E9C8C61F1799E2335 /* VOGWalkthrough */,
+				6A07C73DE23126357021160467DB1571 /* VOGWalkthrough */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		405DC7255A6D486E9C8C61F1799E2335 /* VOGWalkthrough */ = {
+		6A07C73DE23126357021160467DB1571 /* VOGWalkthrough */ = {
 			isa = PBXGroup;
 			children = (
-				F8FF18DF19D0FD6A36CD0B43E280A018 /* VOGWalkthrough.swift */,
-				15D57AA823884E52001A5D30 /* Assets.xcassets */,
-				451EED13884CDB70F5A4A579F6C79E4E /* Pod */,
-				6821AE3F27036387C6652E95A3A6E01A /* Support Files */,
+				15D57AAB238850F3001A5D30 /* Assets.xcassets */,
+				EF686A52EFC512B9225CD40A318437C1 /* VOGWalkthrough.swift */,
+				05CA5B594FB9E11742D9F2F96D8A705B /* Pod */,
+				EA70B33AF2102958319303B39CA34FD5 /* Support Files */,
 			);
 			name = VOGWalkthrough;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		451EED13884CDB70F5A4A579F6C79E4E /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				C7B73E1D17666070E86FC407FF251FDA /* LICENSE */,
-				23336F75352103FD750779B35E5F5573 /* README.md */,
-				0CBA14A636645FB9A63BC4279A873104 /* VOGWalkthrough.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		6821AE3F27036387C6652E95A3A6E01A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1F2F090E97B275B270731E366C33C6FE /* VOGWalkthrough.modulemap */,
-				13F16509296D5DF6B2BCD38CD76A1489 /* VOGWalkthrough.xcconfig */,
-				DCBDB75CB6B69E24BD3FF69205D6CFD5 /* VOGWalkthrough-dummy.m */,
-				DAFE85B15C571915CCB5FE03CF6E3954 /* VOGWalkthrough-Info.plist */,
-				47BC11A7E46AF089C960A7519E61FD6F /* VOGWalkthrough-prefix.pch */,
-				C1188721C03471F130E7A55C8BF9CA80 /* VOGWalkthrough-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/VOGWalkthrough";
 			sourceTree = "<group>";
 		};
 		6FC60C50ADCDACC9D268FC290BAE3C9E /* Pods-VOGWalkthrough_Tests */ = {
@@ -198,11 +201,12 @@
 			path = "Target Support Files/Pods-VOGWalkthrough_Example";
 			sourceTree = "<group>";
 		};
-		923DE440EF6652D9C146B28F5CFB0DB7 /* Products */ = {
+		94A2B835E8A846C7A59058AFEE518AE8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				2139A9F2C644C65F29C7412B09CD88D8 /* Pods_VOGWalkthrough_Example.framework */,
 				D10E366283EC1330D96CD8915CC93184 /* Pods_VOGWalkthrough_Tests.framework */,
+				59185D1CAB541E02BD17927B136B6E18 /* VOGWalkthrough.bundle */,
 				02CDF72F1180760BB02A87AA559F892B /* VOGWalkthrough.framework */,
 			);
 			name = Products;
@@ -214,7 +218,7 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				2ABD6610E4FF84B8E2259C1AEF06ADB3 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				923DE440EF6652D9C146B28F5CFB0DB7 /* Products */,
+				94A2B835E8A846C7A59058AFEE518AE8 /* Products */,
 				72D9DFCDCCDF4B7F4BB0F4F46D7EA0D8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -226,6 +230,21 @@
 				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		EA70B33AF2102958319303B39CA34FD5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3746CFF21E096342812C8CF55B492D26 /* ResourceBundle-VOGWalkthrough-VOGWalkthrough-Info.plist */,
+				E72C9E9978671EEB518BC17CFFE42AE0 /* VOGWalkthrough.modulemap */,
+				A0785CB749267B45DE84CBB3B05B4E03 /* VOGWalkthrough.xcconfig */,
+				2AC832A8ED716154F53A724FD15ED1BE /* VOGWalkthrough-dummy.m */,
+				36AEE26D30184D18EDE526C57511E4AE /* VOGWalkthrough-Info.plist */,
+				DBE7B8F83BD3B58B93A4F4976D1BDE3C /* VOGWalkthrough-prefix.pch */,
+				7C6FD897AC322CACFF2B735A1DD4E7BD /* VOGWalkthrough-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/VOGWalkthrough";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,11 +266,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7AE1F6C831E591E746FBFA4A3DA26785 /* Headers */ = {
+		850111D410FABBD8A38D2C63AD597C5F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7445A51A9266F99B43973FACABCA19A9 /* VOGWalkthrough-umbrella.h in Headers */,
+				C6A3FA8874048E59ABC811354637F225 /* VOGWalkthrough-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +296,23 @@
 			productReference = 2139A9F2C644C65F29C7412B09CD88D8 /* Pods_VOGWalkthrough_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		733DB84ED6783F6BEDC1169C4E9CE7BA /* VOGWalkthrough-VOGWalkthrough */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC91AD2353D97C79F47544737E120773 /* Build configuration list for PBXNativeTarget "VOGWalkthrough-VOGWalkthrough" */;
+			buildPhases = (
+				0A0F8BD41C10CEF38659DB8625AEDBC1 /* Sources */,
+				3764EE8731A431D07D92273A844E78DF /* Frameworks */,
+				DCFF9912F606D5622CBC0631D3B8189C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VOGWalkthrough-VOGWalkthrough";
+			productName = "VOGWalkthrough-VOGWalkthrough";
+			productReference = 59185D1CAB541E02BD17927B136B6E18 /* VOGWalkthrough.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		9E8AE7AC4E643BEF95C6AC052019B520 /* Pods-VOGWalkthrough_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D2D10670CC37BEF670A43FED5DC6143 /* Build configuration list for PBXNativeTarget "Pods-VOGWalkthrough_Tests" */;
@@ -298,16 +334,17 @@
 		};
 		AD9752DF193E1E3D86FD26DDCC9730C9 /* VOGWalkthrough */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C89B0D282703AA429E139835EFC1470A /* Build configuration list for PBXNativeTarget "VOGWalkthrough" */;
+			buildConfigurationList = 3E243DD03951097B0B7FE18733D1FC1E /* Build configuration list for PBXNativeTarget "VOGWalkthrough" */;
 			buildPhases = (
-				7AE1F6C831E591E746FBFA4A3DA26785 /* Headers */,
-				B35F2F9D9FE8C3A4D38C884E2D20A923 /* Sources */,
-				4401E46054F4244A6721475959C21235 /* Frameworks */,
-				FA7DB8B1DDA99E7FE11C616FD209A22E /* Resources */,
+				850111D410FABBD8A38D2C63AD597C5F /* Headers */,
+				8BAE677FC25EBCC7FF68A1DD90D5AFDD /* Sources */,
+				D653C81207B6522848ADD8F1EC3C14B8 /* Frameworks */,
+				EB02A9B3B83E55D86D6404A3E57D2A86 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				015A5B8BF4E417962C9586B267C6A004 /* PBXTargetDependency */,
 			);
 			name = VOGWalkthrough;
 			productName = VOGWalkthrough;
@@ -332,13 +369,14 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 923DE440EF6652D9C146B28F5CFB0DB7 /* Products */;
+			productRefGroup = 94A2B835E8A846C7A59058AFEE518AE8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				0F11B41746925AE4075AEC39643389C4 /* Pods-VOGWalkthrough_Example */,
 				9E8AE7AC4E643BEF95C6AC052019B520 /* Pods-VOGWalkthrough_Tests */,
 				AD9752DF193E1E3D86FD26DDCC9730C9 /* VOGWalkthrough */,
+				733DB84ED6783F6BEDC1169C4E9CE7BA /* VOGWalkthrough-VOGWalkthrough */,
 			);
 		};
 /* End PBXProject section */
@@ -348,7 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15D57AA923884E52001A5D30 /* Assets.xcassets in Resources */,
+				15D57AAC238850F3001A5D30 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,16 +397,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA7DB8B1DDA99E7FE11C616FD209A22E /* Resources */ = {
+		DCFF9912F606D5622CBC0631D3B8189C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB02A9B3B83E55D86D6404A3E57D2A86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8AD70B512B9A8A01C250C07F3AC7E37 /* VOGWalkthrough.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0A0F8BD41C10CEF38659DB8625AEDBC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		284E6667859B9977674B04D3D3321604 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,12 +430,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B35F2F9D9FE8C3A4D38C884E2D20A923 /* Sources */ = {
+		8BAE677FC25EBCC7FF68A1DD90D5AFDD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94E25783BBD8A64E107585C89C30DDB2 /* VOGWalkthrough-dummy.m in Sources */,
-				AC026B9F090C75A02E23E650803F18CD /* VOGWalkthrough.swift in Sources */,
+				168A6D509C410D42F875491106A0D75A /* VOGWalkthrough-dummy.m in Sources */,
+				391D356171F607215481092C4766C76F /* VOGWalkthrough.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +450,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		015A5B8BF4E417962C9586B267C6A004 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VOGWalkthrough-VOGWalkthrough";
+			target = 733DB84ED6783F6BEDC1169C4E9CE7BA /* VOGWalkthrough-VOGWalkthrough */;
+			targetProxy = 0DECED7CAF48678E4D14218082DAE7EE /* PBXContainerItemProxy */;
+		};
 		479FBA93360E2EA325D5E10EDC52B232 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-VOGWalkthrough_Example";
@@ -412,6 +471,37 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0867C37BA83D705BFE79B87FB6C1657F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0785CB749267B45DE84CBB3B05B4E03 /* VOGWalkthrough.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VOGWalkthrough/VOGWalkthrough-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VOGWalkthrough/VOGWalkthrough-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VOGWalkthrough/VOGWalkthrough.modulemap";
+				PRODUCT_MODULE_NAME = VOGWalkthrough;
+				PRODUCT_NAME = VOGWalkthrough;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		14203B1F0F1DEA299C4ECA8B4B687AA4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F6EFF551D9FCBD43D254093EA23EFE3A /* Pods-VOGWalkthrough_Tests.release.xcconfig */;
@@ -513,37 +603,22 @@
 			};
 			name = Debug;
 		};
-		99C5F9086257D5071EF1109B4544B0B4 /* Release */ = {
+		6CEDB064DF93A405FC787EA71E82E3F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13F16509296D5DF6B2BCD38CD76A1489 /* VOGWalkthrough.xcconfig */;
+			baseConfigurationReference = A0785CB749267B45DE84CBB3B05B4E03 /* VOGWalkthrough.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/VOGWalkthrough/VOGWalkthrough-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/VOGWalkthrough/VOGWalkthrough-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VOGWalkthrough";
+				IBSC_MODULE = VOGWalkthrough;
+				INFOPLIST_FILE = "Target Support Files/VOGWalkthrough/ResourceBundle-VOGWalkthrough-VOGWalkthrough-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/VOGWalkthrough/VOGWalkthrough.modulemap";
-				PRODUCT_MODULE_NAME = VOGWalkthrough;
 				PRODUCT_NAME = VOGWalkthrough;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
+			name = Debug;
 		};
 		B0087CB4594321EF41619F3181FE120E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -604,36 +679,22 @@
 			};
 			name = Release;
 		};
-		B2612951224D83C3F74951FC6572E41D /* Debug */ = {
+		B854A24371B7A223A15D01B2AE8327BF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13F16509296D5DF6B2BCD38CD76A1489 /* VOGWalkthrough.xcconfig */;
+			baseConfigurationReference = A0785CB749267B45DE84CBB3B05B4E03 /* VOGWalkthrough.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/VOGWalkthrough/VOGWalkthrough-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/VOGWalkthrough/VOGWalkthrough-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VOGWalkthrough";
+				IBSC_MODULE = VOGWalkthrough;
+				INFOPLIST_FILE = "Target Support Files/VOGWalkthrough/ResourceBundle-VOGWalkthrough-VOGWalkthrough-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/VOGWalkthrough/VOGWalkthrough.modulemap";
-				PRODUCT_MODULE_NAME = VOGWalkthrough;
 				PRODUCT_NAME = VOGWalkthrough;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
 		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -699,6 +760,38 @@
 			};
 			name = Debug;
 		};
+		BBAD79B784023639AF8FEF2646889CD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0785CB749267B45DE84CBB3B05B4E03 /* VOGWalkthrough.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VOGWalkthrough/VOGWalkthrough-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VOGWalkthrough/VOGWalkthrough-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VOGWalkthrough/VOGWalkthrough.modulemap";
+				PRODUCT_MODULE_NAME = VOGWalkthrough;
+				PRODUCT_NAME = VOGWalkthrough;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		E0DB651BCBCBF13F42991F7CE914EA6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E68C08C0CC66CCBB454B8100C190C34 /* Pods-VOGWalkthrough_Example.debug.xcconfig */;
@@ -744,6 +837,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		3E243DD03951097B0B7FE18733D1FC1E /* Build configuration list for PBXNativeTarget "VOGWalkthrough" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0867C37BA83D705BFE79B87FB6C1657F /* Debug */,
+				BBAD79B784023639AF8FEF2646889CD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -762,11 +864,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C89B0D282703AA429E139835EFC1470A /* Build configuration list for PBXNativeTarget "VOGWalkthrough" */ = {
+		CC91AD2353D97C79F47544737E120773 /* Build configuration list for PBXNativeTarget "VOGWalkthrough-VOGWalkthrough" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B2612951224D83C3F74951FC6572E41D /* Debug */,
-				99C5F9086257D5071EF1109B4544B0B4 /* Release */,
+				6CEDB064DF93A405FC787EA71E82E3F8 /* Debug */,
+				B854A24371B7A223A15D01B2AE8327BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
