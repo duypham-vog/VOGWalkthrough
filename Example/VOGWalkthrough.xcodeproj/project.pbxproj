@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11F0A2B8A09E4A57B2F33B75 /* Pods_VOGWalkthrough_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D385A84BA796CA097FF0346 /* Pods_VOGWalkthrough_Example.framework */; };
+		1504BA4F238760E8008823F6 /* ScoreboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1504BA4E238760E8008823F6 /* ScoreboardViewController.swift */; };
 		4CC29A53576F6EE989986453 /* Pods_VOGWalkthrough_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B17F67C7BC43CC11DF1E94F4 /* Pods_VOGWalkthrough_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 		01533EE5F45FE1A3332334FA /* Pods-VOGWalkthrough_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VOGWalkthrough_Example.release.xcconfig"; path = "Target Support Files/Pods-VOGWalkthrough_Example/Pods-VOGWalkthrough_Example.release.xcconfig"; sourceTree = "<group>"; };
 		05E4D15F58765A02523A0FC9 /* Pods-VOGWalkthrough_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VOGWalkthrough_Tests.release.xcconfig"; path = "Target Support Files/Pods-VOGWalkthrough_Tests/Pods-VOGWalkthrough_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		067712611F358992CD83B984 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1504BA4E238760E8008823F6 /* ScoreboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardViewController.swift; sourceTree = "<group>"; };
 		356E178B749B8438C8B8E010 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* VOGWalkthrough_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOGWalkthrough_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				1504BA4E238760E8008823F6 /* ScoreboardViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -334,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				1504BA4F238760E8008823F6 /* ScoreboardViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

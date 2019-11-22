@@ -85,16 +85,6 @@ public struct VOGWalkthroughConfig{
 }
 
 class VOGAppStateWalkthrough {
-    class func getIsDowloadingData() -> Bool? {
-        return UserDefaults.standard.bool(forKey: "___IsDowloadingData")
-    }
-    
-    class func setIsDowloadingData(value:Bool){
-        let defaults = UserDefaults.standard
-        defaults.set(value, forKey:"___IsDowloadingData")
-        defaults.synchronize()
-    }
-    
     class func getfirstLoadApp() -> Bool? {
         return UserDefaults.standard.bool(forKey: "___FirstLoadApp")
     }
@@ -201,12 +191,6 @@ public class VOGWalkthrough {
     }
     
     public func showStep(_ sId: Int? = nil, on controller: UIViewController, screenId: String) {
-        
-//        while (VOGAppStateWalkthrough.getIsDowloadingData() ?? false) == true {
-//            //Wait until download data
-//            print("VOGAppStateWalkthrough.getIsDowloadingData(): \(VOGAppStateWalkthrough.getIsDowloadingData() ?? false)")
-//        }
-        
         if VOGAppStateWalkthrough.getWalkthroughComplete(for: screenId) != nil {
             //            return
         }
@@ -496,7 +480,6 @@ public class VOGWalkthrough {
     //MARK: - ENDPOINT
     
     func loadVOGWalkthrough(){
-        VOGAppStateWalkthrough.setIsDowloadingData(value: true)
         
         let headers: HTTPHeaders = ["Accept": "application/json"]
         Alamofire.request(self.config.url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData(completionHandler: { response in
@@ -504,9 +487,7 @@ public class VOGWalkthrough {
             case .success(let data):
                 let completionResponse = self.decode(item: VOGWalkthroughGetResponse.self, data: data)
                 self.walkthroughData = completionResponse.0?.data ?? []
-                VOGAppStateWalkthrough.setIsDowloadingData(value: false)
             case .failure(let error):
-                VOGAppStateWalkthrough.setIsDowloadingData(value: false)
                 print(error)
                 break
             }
