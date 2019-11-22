@@ -15,17 +15,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        
+        VOGWalkthrough.shared.showStep(on: self, screenId: "Scoreboard")
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(showWalkthrough), userInfo: nil, repeats: false)
-    }
-    
-    @objc func showWalkthrough(){
-        VOGWalkthrough.shared.showStep(on: self, screenId: "Scoreboard")
     }
     
     override func didReceiveMemoryWarning() {
