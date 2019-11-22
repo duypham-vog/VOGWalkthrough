@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //        config.color.icon = .blue
         config.outsidePadding = 20
         config.insidePadding = 20
-        config.delay = 0.6
+        config.delay = 0.5
         config.iconSize = CGSize(width: 20, height: 20)
         
         let walkthrough = VOGWalkthrough.shared

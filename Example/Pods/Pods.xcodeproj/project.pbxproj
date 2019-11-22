@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00EE34ABA6E0941086BF6FDFD6144954 /* Pods-VOGWalkthrough_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DEEACCA1615D963766B701B59538AA0D /* Pods-VOGWalkthrough_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14D40240D801E5798D2701AF080E617F /* Pods-VOGWalkthrough_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74AA3CF46395D75E2F750146195C9E22 /* Pods-VOGWalkthrough_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15D57AA923884E52001A5D30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D57AA823884E52001A5D30 /* Assets.xcassets */; };
 		326F117FB000E3207A6AF1BBA46A1F95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
 		3C51A892B1D47EBE2FA5101E6C3298EF /* Pods-VOGWalkthrough_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82DCFC2483CAFDD5A90FE72BAAFD3D49 /* Pods-VOGWalkthrough_Tests-dummy.m */; };
 		7445A51A9266F99B43973FACABCA19A9 /* VOGWalkthrough-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C1188721C03471F130E7A55C8BF9CA80 /* VOGWalkthrough-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,15 +39,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02CDF72F1180760BB02A87AA559F892B /* VOGWalkthrough.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VOGWalkthrough.framework; path = VOGWalkthrough.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CBA14A636645FB9A63BC4279A873104 /* VOGWalkthrough.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = VOGWalkthrough.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		02CDF72F1180760BB02A87AA559F892B /* VOGWalkthrough.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VOGWalkthrough.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CBA14A636645FB9A63BC4279A873104 /* VOGWalkthrough.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = VOGWalkthrough.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		10A69E6FCE810935E385A1AB4011F6F2 /* Pods-VOGWalkthrough_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VOGWalkthrough_Example-dummy.m"; sourceTree = "<group>"; };
 		13F16509296D5DF6B2BCD38CD76A1489 /* VOGWalkthrough.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VOGWalkthrough.xcconfig; sourceTree = "<group>"; };
+		15D57AA823884E52001A5D30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = VOGWalkthrough/Assets/Assets.xcassets; sourceTree = "<group>"; };
 		1DC5608C586B9B6F8A30AB356DE58C5A /* Pods-VOGWalkthrough_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VOGWalkthrough_Example-frameworks.sh"; sourceTree = "<group>"; };
 		1F2F090E97B275B270731E366C33C6FE /* VOGWalkthrough.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VOGWalkthrough.modulemap; sourceTree = "<group>"; };
 		1F4FA8653FAEC2F115E4F1C7C9768307 /* Pods-VOGWalkthrough_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VOGWalkthrough_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2139A9F2C644C65F29C7412B09CD88D8 /* Pods_VOGWalkthrough_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_VOGWalkthrough_Example.framework; path = "Pods-VOGWalkthrough_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		23336F75352103FD750779B35E5F5573 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		2139A9F2C644C65F29C7412B09CD88D8 /* Pods_VOGWalkthrough_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VOGWalkthrough_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23336F75352103FD750779B35E5F5573 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		3F6B3BE622C952382C5FD092639A592F /* Pods-VOGWalkthrough_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VOGWalkthrough_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -56,14 +58,14 @@
 		74AA3CF46395D75E2F750146195C9E22 /* Pods-VOGWalkthrough_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VOGWalkthrough_Tests-umbrella.h"; sourceTree = "<group>"; };
 		824C0114ACB18E2DBADE7009F3432435 /* Pods-VOGWalkthrough_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VOGWalkthrough_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		82DCFC2483CAFDD5A90FE72BAAFD3D49 /* Pods-VOGWalkthrough_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VOGWalkthrough_Tests-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B29C2CD28F699D24647E652C7072A258 /* Pods-VOGWalkthrough_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VOGWalkthrough_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C1188721C03471F130E7A55C8BF9CA80 /* VOGWalkthrough-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VOGWalkthrough-umbrella.h"; sourceTree = "<group>"; };
 		C125F7C7442C02CB61A9A4653C4F699F /* Pods-VOGWalkthrough_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VOGWalkthrough_Example.modulemap"; sourceTree = "<group>"; };
 		C22BE55D84286146AB8BC29434E047D6 /* Pods-VOGWalkthrough_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VOGWalkthrough_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C7B73E1D17666070E86FC407FF251FDA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C7B73E1D17666070E86FC407FF251FDA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CBFD66FE4541E087C815C5A97112281D /* Pods-VOGWalkthrough_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VOGWalkthrough_Tests-Info.plist"; sourceTree = "<group>"; };
-		D10E366283EC1330D96CD8915CC93184 /* Pods_VOGWalkthrough_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_VOGWalkthrough_Tests.framework; path = "Pods-VOGWalkthrough_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D10E366283EC1330D96CD8915CC93184 /* Pods_VOGWalkthrough_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VOGWalkthrough_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4BDF10F6BEE173DACD8C7BDD9CE4F9F /* Pods-VOGWalkthrough_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VOGWalkthrough_Example-Info.plist"; sourceTree = "<group>"; };
 		DAFE85B15C571915CCB5FE03CF6E3954 /* VOGWalkthrough-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VOGWalkthrough-Info.plist"; sourceTree = "<group>"; };
 		DCBDB75CB6B69E24BD3FF69205D6CFD5 /* VOGWalkthrough-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VOGWalkthrough-dummy.m"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				F8FF18DF19D0FD6A36CD0B43E280A018 /* VOGWalkthrough.swift */,
+				15D57AA823884E52001A5D30 /* Assets.xcassets */,
 				451EED13884CDB70F5A4A579F6C79E4E /* Pod */,
 				6821AE3F27036387C6652E95A3A6E01A /* Support Files */,
 			);
@@ -345,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D57AA923884E52001A5D30 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,8 +598,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

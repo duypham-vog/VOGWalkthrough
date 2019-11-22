@@ -70,13 +70,13 @@ public struct VOGWalkthroughColorConfig{
 public struct VOGWalkthroughConfig{
     public var url:String = "" // URL to get list of walkthrough
     public var color:VOGWalkthroughColorConfig = VOGWalkthroughColorConfig()
-    public var outsidePadding: CGFloat = 0
-    public var insidePadding: CGFloat = 0
+    public var outsidePadding: CGFloat = 20
+    public var insidePadding: CGFloat = 20
     public var font: UIFont = UIFont.systemFont(ofSize: 15)
     public var tapFont: UIFont = UIFont.systemFont(ofSize: 13)
     public var textSize: CGFloat = 17
-    public var delay: Double = 1
-    public var iconSize: CGSize = CGSize.zero
+    public var delay: Double = 0.5
+    public var iconSize: CGSize = CGSize(width: 20, height: 20)
     
     public init(){
         
