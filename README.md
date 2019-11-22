@@ -39,14 +39,17 @@ config.delay = 0.6
 config.iconSize = CGSize(width: 20, height: 20)
 
 let walkthrough = VOGWalkthrough.shared
-walkthrough.setConfig(config: config)```
+walkthrough.setConfig(config: config)
+```
 
 **Config ViewController**
-</br>Open ViewController which you want to display Walkthrough. Insert the viewDidLoad() function. Insert this code 
+</br>Open ViewController which you want to display Walkthrough. Insert the viewDidLoad() function. Insert this code
+
 ```ruby
 VOGWalkthrough.shared.showStep(on: self, screenId: "SCREENID")
 ```
-<br>SCREENID is screenID that is setup on admin panel</br>
+</br>
+SCREENID is screenID that is setup on admin panel
 
 ## Configuration
 | Field | Type  | Description  | Default |
