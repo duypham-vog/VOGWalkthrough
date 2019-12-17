@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         var config = VOGWalkthroughConfig()
-        config.url = "https://api.staging.adp.vogdevelopment.com/api/walkthrough"
+        config.url = "https://api.staging.nubosh.vogdevelopment.com/api/walkthrough"
         //        config.color.title = .red
         //        config.color.content = .yellow
         //        config.color.icon = .blue

@@ -15,7 +15,7 @@ class ScoreboardViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        VOGWalkthrough.shared.showStep(on: self, screenId: "Scoreboard")
+        VOGWalkthrough.shared.showStep(on: self, screenId: "NUBNotificationViewController")
     }
     
 

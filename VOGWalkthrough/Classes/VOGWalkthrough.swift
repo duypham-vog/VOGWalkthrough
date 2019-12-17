@@ -7,51 +7,51 @@ extension Notification.Name {
     static let VOGWalkthroughStepDismissed = Notification.Name("walkthroughStepDismissed")
 }
 
-struct VOGWalkthroughGetResponse: Codable {
-    var data: [VOGWalkthroughData]
-    let code: String
-    let message: String
-    let exceptionName: String?
-    let stackTrace: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case data = "data"
-        case code = "code"
-        case message = "message"
-        case exceptionName = "exceptionName"
-        case stackTrace = "stackTrace"
-    }
-}
+//struct VOGWalkthroughGetResponse: Codable {
+//    var data: [VOGWalkthroughData]
+//    let code: String
+//    let message: String
+//    let exceptionName: String?
+//    let stackTrace: String?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case data = "data"
+//        case code = "code"
+//        case message = "message"
+//        case exceptionName = "exceptionName"
+//        case stackTrace = "stackTrace"
+//    }
+//}
 
-public struct VOGWalkthroughStep: Codable {
-    var stepID: Int
-    var stepType: Int
-    var position: Int
-    var content: String
-    
-    enum CodingKeys: String, CodingKey {
-        case stepID = "stepId"
-        case stepType = "stepType"
-        case position = "position"
-        case content = "content"
-    }
-}
-
-public struct VOGWalkthroughData: Codable {
-    var steps: [VOGWalkthroughStep]
-    var id: Int
-    var screenID: String
-    var name: String
-    var createdAt: String
-    
-    enum CodingKeys: String, CodingKey {
-        case steps = "steps"
-        case id = "id"
-        case screenID = "screenId"
-        case name = "name"
-        case createdAt = "createdAt"
-    }
-}
+//public struct VOGWalkthroughStep: Codable {
+//    var stepID: Int
+//    var stepType: Int
+//    var position: Int
+//    var content: String
+//
+//    enum CodingKeys: String, CodingKey {
+//        case stepID = "stepId"
+//        case stepType = "stepType"
+//        case position = "position"
+//        case content = "content"
+//    }
+//}
+//
+//public struct VOGWalkthroughData: Codable {
+//    var steps: [VOGWalkthroughStep]
+//    var id: Int
+//    var screenID: String
+//    var name: String
+//    var createdAt: String
+//
+//    enum CodingKeys: String, CodingKey {
+//        case steps = "steps"
+//        case id = "id"
+//        case screenID = "screenId"
+//        case name = "name"
+//        case createdAt = "createdAt"
+//    }
+//}
 
 public struct VOGWalkthroughColorConfig{
     public var title:UIColor!
@@ -119,7 +119,9 @@ public class VOGWalkthrough {
     private var direction: Int = 0
     private let iconPadding: CGFloat = 30
     
-    private var walkthroughData: [VOGWalkthroughData] = [] {
+    var viewBG:UIView!
+    
+    private var walkthroughData: [VOGWalkthroughs] = [] {
         didSet {
             NotificationCenter.default.post(name: Notification.Name.VOGWalkthroughDownloaded, object: nil)
             print("Posting notification for VOGWalkthrough downloaded")
@@ -127,7 +129,7 @@ public class VOGWalkthrough {
     }
     private var currentScreenId: String = ""
     private var currentStepId: Int = 0
-    private var currentSteps: [VOGWalkthroughStep] = []
+    private var currentSteps: [VOGWalkthroughSteps] = []
     
     private enum Position: Int {
         case fromLeft = 0
@@ -166,22 +168,23 @@ public class VOGWalkthrough {
         VOGAppStateWalkthrough.setfirstLoadApp(value: true)
     }
     
-    func setupSteps(_ data: [VOGWalkthroughData]) {
-        var updatedSteps: [VOGWalkthroughData] = []
+    func setupSteps(_ data: [VOGWalkthroughs]) {
+        var updatedSteps: [VOGWalkthroughs] = []
         // Need to fix the stepIds
         for screen in data {
-            var newScreen = VOGWalkthroughData(steps: [], id: screen.id, screenID: screen.screenID, name: screen.name, createdAt: screen.createdAt)
+            var newScreen = VOGWalkthroughs(id: screen.id, name: screen.name, steps: screen.steps, walkthroughPlatformScreens: screen.walkthroughPlatformScreens, walkthroughPlatformScreenIdList: screen.walkthroughPlatformScreenIdList)
+            
             for (i, step) in screen.steps.enumerated() {
-                print("setupSteps: step \(i) for \(screen.screenID) is \(step.content)")
-                let newStep = VOGWalkthroughStep(stepID: i, stepType: step.stepType, position: step.position, content: step.content)
+                print("setupSteps: step \(i) for \(screen.id) is \(step.content)")
+                
+                let newStep = VOGWalkthroughSteps(id: i, stepType: step.stepType, position: step.position, content: step.content)
                 newScreen.steps.append(newStep)
             }
             updatedSteps.append(newScreen)
         }
         
         self.walkthroughData = updatedSteps
-        
-        //        NotificationCenter.default.post(name: Notification.Name.VOGWalkthroughDownloaded, object: nil)
+         //        NotificationCenter.default.post(name: Notification.Name.VOGWalkthroughDownloaded, object: nil)
         //        print("Posting notification for VOGWalkthrough downloaded from setupSteps")
     }
     
@@ -198,26 +201,63 @@ public class VOGWalkthrough {
         self.viewController = controller
         self.screenId = screenId
         
-        if let screen = walkthroughData.filter({ $0.screenID == screenId }).first {
+        if self.walkthroughData.count > 0 {
+            if let tv = self.viewController?.tabBarController {
+                if viewBG == nil {
+                    viewBG = UIView(frame: (tv.view.frame))
+                    viewBG.backgroundColor = .clear
+                    tv.view.addSubview(viewBG)
+                }else{
+                    if !(tv.view.subviews.contains(viewBG!)){
+                        tv.view.addSubview(viewBG)
+                    }
+                }
+            }else if let nv = self.viewController?.navigationController {
+                if viewBG == nil {
+                    viewBG = UIView(frame: (nv.view.frame))
+                    viewBG.backgroundColor = .clear
+                    nv.view.addSubview(viewBG)
+                }else{
+                    if !(nv.view.subviews.contains(viewBG!)){
+                        nv.view.addSubview(viewBG)
+                    }
+                }
+            }else{
+                if viewBG == nil {
+                    viewBG = UIView(frame: (self.viewController?.view.frame)!)
+                    viewBG.backgroundColor = UIColor.red.withAlphaComponent(0.25)
+                    self.viewController?.view.addSubview(viewBG)
+                }else{
+                    if !(self.viewController?.view.subviews.contains(viewBG!))!{
+                        self.viewController?.view.addSubview(viewBG)
+                    }
+                }
+            }
+        }
+        
+        
+        
+        if let screen = walkthroughData.filter({ $0.walkthroughPlatformScreens.first!.viewOrActivityName == screenId }).first {
             let steps = screen.steps
             currentSteps = steps
-            
+
             var stepID = sId
             if sId == nil {
-                stepID = steps.first?.stepID ?? 0
+                stepID = steps.first?.id ?? 0
             }
-            
+
             print("VOGWalkthrough: showStep \(stepID!) for screenId \(screenId)")
             currentStepId = stepID!
             currentScreenId = screenId
             print("VOGWalkthrough: VOGWalkthroughData is \(walkthroughData)")
-            
-            if let step = steps.filter({ $0.stepID == stepID }).first {
+
+            if let step = steps.filter({ $0.id == stepID }).first {
                 print("showStep: step is \(step)")
-                direction = step.position
+                direction = step.position.id
                 setupHelperView(for: step)
-                controller.view.addSubview(helperView)
-                switch step.position {
+//                controller.view.addSubview(helperView)
+                self.viewBG.addSubview(helperView)
+                switch step.position.id {
                 case Position.bottom.rawValue:
                     animateFromBottom()
                 case Position.top.rawValue:
@@ -246,10 +286,10 @@ public class VOGWalkthrough {
         print("VOGWalkthrough: showNextStep for currentStepId \(currentStepId)")
         print("VOGWalkthrough: currentSteps count is \(currentSteps.count)")
         
-        if let currentIndex = currentSteps.firstIndex(where: { $0.stepID == currentStepId }) {
+        if let currentIndex = currentSteps.firstIndex(where: { $0.id == currentStepId }) {
             print("VOGWalkthrough: currentIndex: \(currentIndex)")
             if currentIndex < (currentSteps.count - 1) {
-                let nextId = currentSteps[currentIndex + 1].stepID
+                let nextId = currentSteps[currentIndex + 1].id
                 showStep(nextId, on: controller, screenId: currentScreenId)
             } else if currentIndex == 1 && currentSteps.count == 2 {
                 VOGAppStateWalkthrough.setWalkthroughComplete(for: forScreenId)
@@ -267,6 +307,10 @@ public class VOGWalkthrough {
                 $0.removeFromSuperview()
             }
         })
+        
+        if viewBG != nil {
+            viewBG.removeFromSuperview()
+        }
     }
     
     private func animateFromTop() {
@@ -293,7 +337,7 @@ public class VOGWalkthrough {
         }, completion: nil)
     }
     
-    private func setupHelperView(for step: VOGWalkthroughStep) {
+    private func setupHelperView(for step: VOGWalkthroughSteps) {
         let screenMinX = UIScreen.main.bounds.minX
         let screenMinY = UIScreen.main.bounds.minY
         let screenMaxY = UIScreen.main.bounds.maxY
@@ -340,7 +384,7 @@ public class VOGWalkthrough {
         
         var frame = CGRect.zero
         
-        switch step.position {
+        switch step.position.id {
         case Position.top.rawValue:
             print("Setting frame using Position Top")
             frame = CGRect(x: startX, y: screenMinY + outsidePadding + 50, width: viewWidth, height: viewHeight)
@@ -398,7 +442,7 @@ public class VOGWalkthrough {
         helperView.addSubview(label)
         addGestureRecognizer(to: helperView)
         
-        switch step.position {
+        switch step.position.id {
         case Position.top.rawValue:
             helperView.center.y -= UIScreen.main.bounds.height
         case Position.bottom.rawValue:
@@ -518,4 +562,63 @@ public class VOGWalkthrough {
         }
         
     }
+}
+
+extension UIView {
+    func getAllSubviews() -> [UIView] {
+        var all = [UIView]()
+        func getSubview(view: UIView) {
+            all.append(view)
+            guard view.subviews.count>0 else { return }
+            view.subviews.forEach{ getSubview(view: $0) }
+        }
+        getSubview(view: self)
+        return all
+    }
+}
+
+struct VOGWalkthroughPlatformScreens: Codable {
+    var id:Int
+    var platformType:VOGWalkthroughPlatformTypes
+    var viewOrActivityName:String
+    var imagePath:String
+}
+
+struct VOGWalkthroughPlatformTypes: Codable {
+    var id:Int
+    var name:String
+}
+
+struct VOGWalkthroughTypes: Codable {
+    var id:Int
+    var name:String
+}
+
+struct VOGWalkthroughPositions: Codable {
+    var id:Int
+    var name:String
+}
+
+struct VOGWalkthroughSteps: Codable {
+    var id:Int
+    var stepType:VOGWalkthroughTypes
+    var position:VOGWalkthroughPositions
+    var content:String
+    var index:Int?
+}
+
+struct VOGWalkthroughs: Codable {
+    var id:Int
+    var name:String
+    var steps:[VOGWalkthroughSteps]
+    var walkthroughPlatformScreens:[VOGWalkthroughPlatformScreens]
+    var walkthroughPlatformScreenIdList:[Int]
+}
+
+struct VOGWalkthroughGetResponse: Codable {
+    var data: [VOGWalkthroughs]
+    let code: String
+    let message: String
+    let exceptionName: String?
+    let stackTrace: String?
 }

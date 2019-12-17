@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        VOGWalkthrough.shared.showStep(on: self, screenId: "Scoreboard")
+        VOGWalkthrough.shared.showStep(on: self, screenId: "NUBHomeViewController")
     }
 
     override func viewWillAppear(_ animated: Bool) {
