@@ -43,7 +43,7 @@ walkthrough.setConfig(config: config)
 ```
 
 **Config ViewController**
-</br>Open ViewController which you want to display Walkthrough. Insert the viewDidLoad() function. Insert this code
+</br>Open ViewController which you want to display Walkthrough. Inside the viewDidLoad() function, insert this code
 
 ```ruby
 VOGWalkthrough.shared.showStep(on: self, screenId: "SCREENID")
