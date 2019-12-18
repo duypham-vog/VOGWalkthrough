@@ -7,52 +7,6 @@ extension Notification.Name {
     static let VOGWalkthroughStepDismissed = Notification.Name("walkthroughStepDismissed")
 }
 
-//struct VOGWalkthroughGetResponse: Codable {
-//    var data: [VOGWalkthroughData]
-//    let code: String
-//    let message: String
-//    let exceptionName: String?
-//    let stackTrace: String?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case data = "data"
-//        case code = "code"
-//        case message = "message"
-//        case exceptionName = "exceptionName"
-//        case stackTrace = "stackTrace"
-//    }
-//}
-
-//public struct VOGWalkthroughStep: Codable {
-//    var stepID: Int
-//    var stepType: Int
-//    var position: Int
-//    var content: String
-//
-//    enum CodingKeys: String, CodingKey {
-//        case stepID = "stepId"
-//        case stepType = "stepType"
-//        case position = "position"
-//        case content = "content"
-//    }
-//}
-//
-//public struct VOGWalkthroughData: Codable {
-//    var steps: [VOGWalkthroughStep]
-//    var id: Int
-//    var screenID: String
-//    var name: String
-//    var createdAt: String
-//
-//    enum CodingKeys: String, CodingKey {
-//        case steps = "steps"
-//        case id = "id"
-//        case screenID = "screenId"
-//        case name = "name"
-//        case createdAt = "createdAt"
-//    }
-//}
-
 public struct VOGWalkthroughColorConfig{
     public var title:UIColor!
     public var content:UIColor!
